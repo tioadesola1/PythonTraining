@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+.env/
+
+# Django
+*.log
+*.sqlite3
+db.sqlite3
+/media/
+staticfiles/
+
+# VS Code / IntelliJ
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac system files
+.DS_Store
+
+# PyCharm & JetBrains
+*.iml
+*.iws
+.idea/
+
+# Environment Variables
+.env

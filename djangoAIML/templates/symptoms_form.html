@@ -1,0 +1,19 @@
+<!-- templates/chat/symptoms_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Symptom Checker</title>
+</head>
+<body>
+<h2>Enter your symptoms</h2>
+<form method="POST" action="{% url 'predict_disease' %}">
+  {% csrf_token %}
+  <textarea name="symptoms" rows="5" cols="50" placeholder="e.g., I have a headache and sore throat."></textarea><br>
+  <button type="submit">Predict</button>
+</form>
+
+{% if prediction %}
+<h3>Predicted Disease: {{ prediction }}</h3>
+{% endif %}
+</body>
+</html>
