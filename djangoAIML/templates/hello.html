@@ -11,5 +11,10 @@
 {% else %}
 <h1>Hello World!</h1>
 {% endif %}
+
+{% if prediction %}
+<p>Predicted disease: <strong>{{ prediction }}</strong></p>
+{% endif %}
+
 </body>
 </html>

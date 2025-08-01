@@ -1,4 +1,3 @@
-<!-- templates/chat/symptoms_form.html -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,12 +7,14 @@
 <h2>Enter your symptoms</h2>
 <form method="POST" action="{% url 'predict_disease' %}">
   {% csrf_token %}
-  <textarea name="symptoms" rows="5" cols="50" placeholder="e.g., I have a headache and sore throat."></textarea><br>
+  <textarea name="text" rows="5" cols="50" placeholder="e.g., I have a headache and sore throat."></textarea><br>
   <button type="submit">Predict</button>
 </form>
 
 {% if prediction %}
-<h3>Predicted Disease: {{ prediction }}</h3>
+<p><strong>Predicted Disease:</strong> {{ prediction }}</p>
+{% elif error %}
+<p style="color:#ff0000;">{{ error }}</p>
 {% endif %}
 </body>
 </html>

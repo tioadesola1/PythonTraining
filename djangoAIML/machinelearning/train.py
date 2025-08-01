@@ -38,6 +38,6 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
 print(classification_report(y_test, y_pred, target_names=label_encoder.classes_))
 
 # Save model and encoders
-joblib.dump(BASE_DIR, os.path.join(BASE_DIR, 'model.pkl'))
+joblib.dump(prediction_model, os.path.join(BASE_DIR, 'model.pkl'))
 joblib.dump(vectorizer, os.path.join(BASE_DIR, 'vectorizer.pkl'))
 joblib.dump(label_encoder, os.path.join(BASE_DIR, 'label_encoder.pkl'))
